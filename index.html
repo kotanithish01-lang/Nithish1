@@ -6,45 +6,94 @@
     <style>
         body {
             font-family: Arial;
-            margin: 20px;
-            background-color: #f0f8ff;
-            color: #333;
+            margin: 0;
+            background: #f4f6fb;
         }
 
-        h1 {
+        /* Header */
+        .header {
+            background: #dbe7ff;
+            padding: 20px;
             text-align: center;
+            border-bottom: 2px solid #999;
         }
 
-        .section {
+        .header h1 {
+            margin: 0;
+        }
+
+        /* Navigation */
+        .nav {
+            background: #d4f5d4;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 2px solid #999;
+        }
+
+        .nav a {
+            margin: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+        }
+
+        /* Layout */
+        .main {
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .left {
+            flex: 2;
+        }
+
+        .right {
+            flex: 1;
+            background: #fff3cd;
             padding: 15px;
-            border: 1px solid black;
-            margin-bottom: 15px;
+            border-radius: 10px;
         }
 
-        .container {
+        .box {
+            background: #e8e4ff;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        table, th, td {
+            border: 1px solid #aaa;
+            padding: 10px;
+        }
+
+        th {
+            background: #f2dede;
+        }
+
+        /* Image + text */
+        .flexbox {
             display: flex;
             align-items: center;
         }
 
-        img {
-            width: 200px;
-            margin-right: 20px;
+        .flexbox img {
+            width: 150px;
+            margin-right: 15px;
         }
 
-        table {
-            border-collapse: collapse;
-            width: 100%;
-        }
-
-        table, th, td {
-            border: 1px solid black;
-            padding: 10px;
-        }
-
+        /* Footer */
         footer {
             text-align: center;
-            background: lightgray;
-            padding: 10px;
+            background: #cfe2ff;
+            padding: 15px;
             margin-top: 20px;
         }
     </style>
@@ -54,76 +103,101 @@
 <body>
 
     <!-- Header -->
-    <div class="section">
-        <h1>Introduction to Web Programming</h1>
-        <p><b>College Name:</b> NGIT</p>
-        <p><b>Subject:</b> Web Programming</p>
-        <p><b>Student Name:</b> NITHISH</p>
+    <div class="header">
+        <h1>INTRODUCTION TO WEB PROGRAMMING</h1>
+        <p>NEIL GOGTE INSTITUTE OF TECHNOLOGY</p>
+        <p>Subject: Web Programming | Student Name: NITHISH</p>
     </div>
 
-    <!-- Div Sections -->
-    <div class="section">
-        <h2>Introduction</h2>
-        <p>Web programming is used to create websites and web applications.</p>
+    <!-- Navigation -->
+    <div class="nav">
+        <a href="#">Home</a>
+        <a href="#">Introduction</a>
+        <a href="#">Concepts</a>
+        <a href="#">Media</a>
+        <a href="#">Resources</a>
     </div>
 
-    <div class="section">
-        <h2>Concepts</h2>
-        <p>Includes HTTP, Web Servers, GET and POST methods.</p>
+    <!-- Main Layout -->
+    <div class="main">
+
+        <!-- Left Side -->
+        <div class="left">
+
+            <!-- Introduction -->
+            <div id="home" class="box">
+                <h2>Introduction</h2>
+                <div class="flexbox">
+                    <img src="webdevelopment.png">
+                    <p>
+                        Web programming is the process of creating websites 
+                        and web applications using HTML, CSS, JavaScript.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Table -->
+            <div class="box">
+                <h2>Web Concepts</h2>
+
+                <table>
+                    <tr>
+                        <th>Concept</th>
+                        <th>Description</th>
+                    </tr>
+
+                    <tr>
+                        <td>Web Server</td>
+                        <td>Stores and delivers web pages</td>
+                    </tr>
+
+                    <tr>
+                        <td>HTTP Request</td>
+                        <td>Request sent by browser</td>
+                    </tr>
+
+                    <tr>
+                        <td>GET Method</td>
+                        <td>Retrieves data</td>
+                    </tr>
+
+                    <tr>
+                        <td>POST Method</td>
+                        <td>Sends data securely</td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+
+        <!-- Right Side (Aside) -->
+        <div class="right">
+            <h2>Media Section</h2>
+
+            <h4>Video</h4>
+            <video controls width="100%">
+                <source src="web.mp4">
+            </video>
+
+            <hr>
+
+            <h4>Audio</h4>
+            <audio controls>
+                <source src="darkweb.mp3">
+            </audio>
+
+            <hr>
+
+            <h3>Resources</h3>
+            <ul>
+                <li><a href="https://www.w3schools.com">W3Schools</a></li>
+                <li><a href="https://developer.mozilla.org">MDN Docs</a></li>
+                <li><a href="https://www.youtube.com/watch?v=HD13eq_Pmp8">Learn HTML</a></li>
+                <li><a href="https://www.youtube.com/watch?v=Ihy0QziLDf0">JavaScript Tutorial</a></li>
+            </ul>
+        </div>
+
     </div>
-
-    <div class="section">
-        <h2>Media Section</h2>
-    </div>
-
-    <!-- Table -->
-    <div class="section">
-        <table>
-            <tr>
-                <th>Concept</th>
-                <th>Description</th>
-            </tr>
-            <tr>
-                <td>Web Server</td>
-                <td>Stores and serves web pages</td>
-            </tr>
-            <tr>
-                <td>HTTP Request</td>
-                <td>Request sent by client</td>
-            </tr>
-            <tr>
-                <td>GET Method</td>
-                <td>Fetch data from server</td>
-            </tr>
-            <tr>
-                <td>POST Method</td>
-                <td>Send data securely</td>
-            </tr>
-        </table>
-    </div>
-
-    <!-- Image + Text -->
-    <p>IMAGE</p>
-    <div class="container">
-        <img src="webdevelopment.png" width="300">
-        <p>Web programming enables building interactive and dynamic websites.</p>
-    </div>
-
-    <br>
-
-    <!-- Video -->
-    <p>VIDEO</p>
-    <video controls width="300">
-        <source src="web.mp4">
-    </video>
-
-    <br>
-
-    <!-- Audio -->
-    <p>AUDIO</p>
-    <audio controls>
-        <source src="darkweb.mp3">
-    </audio>
 
     <!-- Footer -->
     <footer>
