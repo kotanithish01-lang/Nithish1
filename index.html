@@ -6,7 +6,8 @@
     <style>
         body {
             font-family: Arial;
-            margin: 0;
+            margin: 0px;
+            padding: 20px;
             background: #f4f6fb;
         }
 
@@ -15,9 +16,11 @@
             background: #dbe7ff;
             padding: 20px;
             text-align: center;
-            border-bottom: 2px solid #999;
+            border: 3px solid;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            
         }
-
         .header h1 {
             margin: 0;
         }
@@ -28,6 +31,10 @@
             padding: 10px;
             text-align: center;
             border-bottom: 2px solid #999;
+            border: 3px solid;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            
         }
 
         .nav a {
@@ -40,12 +47,14 @@
         /* Layout */
         .main {
             display: flex;
-            padding: 20px;
+            padding: 0;
             gap: 20px;
         }
 
         .left {
-            flex: 2;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
         }
 
         .right {
@@ -53,13 +62,21 @@
             background: #fff3cd;
             padding: 15px;
             border-radius: 10px;
+            border: 3px solid;
+            margin-bottom: 0;
         }
 
         .box {
+            flex: 1;
             background: #e8e4ff;
             padding: 15px;
             margin-bottom: 20px;
             border-radius: 10px;
+            border: 3px solid;
+        }
+        #box2{
+            background-color: hsl(195, 78%, 84%);
+            margin-bottom: -1.8px;
         }
 
         /* Table */
@@ -85,8 +102,8 @@
         }
 
         .flexbox img {
-            width: 150px;
-            margin-right: 15px;
+            width: 300px;
+            margin-right: 20px;
         }
 
         /* Footer */
@@ -94,14 +111,18 @@
             text-align: center;
             background: #cfe2ff;
             padding: 15px;
-            margin-top: 20px;
+            margin-top: -5px;
+            border: 3px solid;
+            border-radius: 10px;
+            margin-top: 10px;
+
         }
     </style>
 
 </head>
 
 <body>
-
+    
     <!-- Header -->
     <div class="header">
         <h1>INTRODUCTION TO WEB PROGRAMMING</h1>
@@ -125,7 +146,7 @@
         <div class="left">
 
             <!-- Introduction -->
-            <div id="home" class="box">
+            <div class="box" id="box1">
                 <h2>Introduction</h2>
                 <div class="flexbox">
                     <img src="webdevelopment.png">
@@ -137,7 +158,7 @@
             </div>
 
             <!-- Table -->
-            <div class="box">
+            <div class="box" id="box2">
                 <h2>Web Concepts</h2>
 
                 <table>
