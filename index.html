@@ -5,10 +5,10 @@
 
     <style>
         body {
-            font-family: Arial;
+            font-family: Arial,sans-serif;
             margin: 0px;
             padding: 20px;
-            background: linear-gradient(320deg,#eb92be,#ffef78,#63c9b4);
+            background: linear-gradient(320deg,#eb92be,#ffef78,#0fdeed,#eb92be);
             background-repeat: no-repeat;
         }
 
@@ -34,8 +34,6 @@
             border: 3px solid;
             border-radius: 10px;
             margin-bottom: 10px;
-            
-            
         }
 
         .nav a {
@@ -111,6 +109,8 @@
         .flexbox img {
             width: 300px;
             margin-right: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 25px blue;
         }
 
         /* Footer */
@@ -124,9 +124,10 @@
             margin-top: 10px;
         }
         .nav a:hover{
-            background-color: hsl(219, 81%, 56%);
-            color: white;
+            text-shadow: 0px 0px 10px white;
+            color: blue;
             border-radius: 10px;
+            
         }
         .right a{
             text-decoration: none;
@@ -137,6 +138,27 @@
         .header:hover,.nav:hover,#box1:hover,#box2:hover,.right:hover,footer:hover{
             animation-name: glow;
             animation-duration: 2s;
+        }
+        .right a:hover{
+            color: black;
+        }
+
+        @media(max-width:768px){
+
+            .main{
+                flex-direction:column;
+            }
+
+            .flexbox{
+                flex-direction:column;
+                text-align:center;
+            }
+
+            .nav a{
+                display:block;
+                margin:10px 0;
+            }
+
         }
     </style>
 
