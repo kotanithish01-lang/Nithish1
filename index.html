@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Introduction to Web Programming</title>
+
+    <style>
+        body {
+            font-family: Arial,sans-serif;
+            margin: 0px;
+            padding: 20px;
+            background: linear-gradient(320deg,#eb92be,#ffef78,#0fdeed,#eb92be);
+            background-repeat: no-repeat;
+        }
+
+        /* Header */
+        .header {
+            background: #dbe7ff;
+            padding: 20px;
+            text-align: center;
+            border: 3px solid;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .header h1 {
+            margin: 0;
+        }
+
+        /* Navigation */
+        .nav {
+            background: #d4f5d4;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 2px solid #999;
+            border: 3px solid;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .nav a {
+            display: inline-block;
+            margin: 15px;
+            text-decoration: none;
+            font-weight: bold;
+            color: black;
+            padding: 7px 10px;
+            transition: 0.3s;
+        }
+
+        /* Layout */
+        .main {
+            display: flex;
+            padding: 0;
+            gap: 20px;
+        }
+
+        .left {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .right {
+            flex: 1;
+            background: hsl(45, 84%, 90%);
+            padding: 15px;
+            border-radius: 10px;
+            border: 3px solid;
+            margin-bottom: 0;
+        }
+
+        .box {
+            flex: 1;
+            background: #e8e4ff;
+            padding: 15px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            border: 3px solid;
+        }
+        #box1{
+            margin-bottom: 10px;
+        }
+        #box2{
+            background-color: hsl(195, 87%, 88%);
+            margin-bottom: -0.7px;
+        }
+
+        /* Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+        }
+
+        table, th, td {
+            border: 1px solid #aaa;
+            padding: 10px;
+        }
+
+        th {
+            background: #f2dede;
+        }
+
+        /* Image + text */
+        .flexbox {
+            display: flex;
+            align-items: center;
+        }
+
+        .flexbox img {
+            width: 300px;
+            margin-right: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 25px blue;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background: #cfe2ff;
+            padding: 15px;
+            margin-top: -5px;
+            border: 3px solid;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+        .nav a:hover{
+            text-shadow: 0px 0px 10px white;
+            color: blue;
+            border-radius: 10px;
+            
+        }
+        .right a{
+            text-decoration: none;
+        }
+        @keyframes glow{
+            50%{box-shadow: 0px 0px 50px red}
+        }
+        .header:hover,.nav:hover,#box1:hover,#box2:hover,.right:hover,footer:hover{
+            animation-name: glow;
+            animation-duration: 2s;
+        }
+        .right a:hover{
+            color: black;
+        }
+
+        @media(max-width:768px){
+
+            .main{
+                flex-direction:column;
+            }
+
+            .flexbox{
+                flex-direction:column;
+                text-align:center;
+            }
+
+            .nav a{
+                display:block;
+                margin:10px 0;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body><!-- Header -->
+<div class="header">
+    <h1>ARTIFICIAL INTELLIGENCE BASICS</h1>
+    <p>NEIL GOGTE INSTITUTE OF TECHNOLOGY</p>
+    <p>Subject: Artificial Intelligence | Student Name: KOTA NITHISH</p>
+</div>
+
+<!-- Navigation -->
+<div class="nav">
+    <a href="#home">Home</a>
+    <a href="#introduction">Introduction</a>
+    <a href="#concepts">Concepts</a>
+    <a href="#media">Media</a>
+    <a href="#resources">Resources</a>
+</div>
+
+<!-- Main Layout -->
+<div class="main">
+
+    <!-- Left Side -->
+    <div class="left">
+
+        <!-- Introduction -->
+        <div class="box" id="box1">
+            <h2>Introduction</h2>
+            <div class="flexbox">
+                <img src="AI.png">
+                <p>
+                    Artificial Intelligence (AI) is a branch of computer science
+                    that enables machines to perform tasks that normally require
+                    human intelligence, such as learning, reasoning, and decision-making.
+                </p>
+            </div>
+        </div>
+
+        <!-- Table -->
+        <div class="box" id="box2">
+            <h2>AI Concepts</h2>
+
+            <table>
+                <tr>
+                    <th>Concept</th>
+                    <th>Description</th>
+                </tr>
+
+                <tr>
+                    <td>Machine Learning</td>
+                    <td>Enables systems to learn from data</td>
+                </tr>
+
+                <tr>
+                    <td>Neural Networks</td>
+                    <td>Models inspired by the human brain</td>
+                </tr>
+
+                <tr>
+                    <td>Natural Language Processing</td>
+                    <td>Helps computers understand human language</td>
+                </tr>
+
+                <tr>
+                    <td>Computer Vision</td>
+                    <td>Allows machines to analyze images and videos</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <!-- Right Side (Aside) -->
+    <div class="right">
+        <h2>Media Section</h2>
+
+        <h4>Video</h4>
+        <video controls width="100%">
+            <source src="AI.mp4">
+        </video>
+
+        <hr>
+
+        <h4>Audio</h4>
+        <audio controls>
+            <source src="AI.mp3">
+        </audio>
+
+        <hr>
+
+        <h3>Resources</h3>
+        <ul>
+            <li><a href="https://www.ibm.com/topics/artificial-intelligence">AI Overview</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Artificial_intelligence">AI Concepts</a></li>
+            <li><a href="https://www.youtube.com/watch?v=2ePf9rue1Ao">Introduction to AI</a></li>
+            <li><a href="https://www.youtube.com/watch?v=JMUxmLyrhSk">AI Tutorial</a></li>
+        </ul>
+    </div>
+
+</div>
+
+<!-- Footer -->
+<footer>
+    © 2026 Artificial Intelligence Assignment
+</footer>
+
+</body>
+</html>
